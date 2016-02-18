@@ -3,6 +3,7 @@
 	<head>
 		<meta charset=utf-8>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<title>DogeBook</title>
 	</head>
 	<body>
 
@@ -10,8 +11,10 @@
 			
 			<div id="front">
 				<div id="register-doge">
-					<a href="register.php">Join the Doges!</a>
+					<p>Join the Doges!</p>
+					<a class="ghost-button" href="register.php">Register now!</a>
 				</div>
 			</div>
+		<?php include("footer.php"); ?>
 		</body>
 </html>

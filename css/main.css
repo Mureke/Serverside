@@ -3,34 +3,52 @@
 #header {
 	position: fixed;
 	top: 0;
-	background-color: pink;
 	width: 100%;
-	height: 80px;
+	height: 50px;
 }
 
-#header h2 {
-	color: green;
-	padding-top: 10px;
+#header p {
+	color: #1E5AE6;
+	padding-top: 8px;
 	padding-left: 15px;
 	margin: 0px;
 	width: 50%;
 	position: relative;
+	font-size:35px;
+	font-weight: bold;
 }
 
 #header .login {
 	position: absolute;
-	top:0;
+	top:10px;
 	right:0;
 	padding: 0px;
 	margin: 0px;
 	margin-right:15px;
+	color: #1E5AE6;
+	font-size:20px;
 }
 
-/** Main content **/
+#header #login-button {
+	float: right;
+	margin-left:10px;
+}
+
+/** Front page content **/
+
+* {
+	font-family:"Comic Sans MS", "Comic Sans", cursive;
+}
 
 body {
 	padding:0;
 	margin:0;
+}
+
+p.error {
+	color:red;
+	font-weight: bold;
+	font-size: 110%;
 }
 
 #front {
@@ -44,12 +62,50 @@ body {
 
 #register-doge {
 	text-align: center;
-	padding-top:200px;
+	padding-top:180px;
 }
 
-#register-doge a {
+#register-doge p {
 	text-decoration: none;
-	font-size: 50px;
-	color: pink;
-	font-family:"Comic Sans MS", "Comic Sans", cursive;
+	font-size: 60px;
+	color: #fff;
+}
+
+.ghost-button {
+	font-size:150%;
+	display: inline-block;
+	width: 210px;
+	padding: 8px;
+	color: #fff;
+	border: 2px solid #fff;
+	text-align: center;
+	outline: none;
+	text-decoration: none;
+	transition: background-color 0.2s ease-out,
+              border-color 0.2s ease-out;
+}
+.ghost-button:hover,
+.ghost-button:active {
+	background-color: #fff; /* fallback */
+	background-color: rgba(255, 255, 255, 0.4);
+	border-color: #fff; /* fallback */
+	border-color: rgba(255, 255, 255, 0.4);
+	transition: background-color 0.3s ease-in,
+              border-color 0.3s ease-in;
+}
+
+/** Footer styles **/
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 28px;
+}
+
+#footer p {
+	color: #1E5AE6;
+	text-align: center;
+	bottom:12px;
+	position: relative;
 }
