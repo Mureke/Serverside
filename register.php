@@ -8,5 +8,4 @@
 				<p><input id="submit" type="submit" name="submit" value="Register"></p>
 		</form>
 	</div>
-     </body>
-</html>
+ <?php include('footer.php'); ?>
