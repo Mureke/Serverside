@@ -1,4 +1,5 @@
-	<div id="register-doge">
+<?php include('header.php');?>
+<div id="register-doge">
 		<form action="register.php" method="post">
 				<p><label class="label" for="username">Username:</label><input id="username" type="text" name="username" size="30" maxlength="30" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>"></p>
 				<p><label class="label" for="email">Email:</label><input id="email" type="text" name="email" size="30" maxlength="60" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" > </p>
@@ -7,3 +8,5 @@
 				<p><input id="submit" type="submit" name="submit" value="Register"></p>
 		</form>
 	</div>
+     </body>
+</html>
