@@ -1,21 +1,23 @@
 /** Styles for header **/
+
 #header {
 	position: fixed;
 	top: 0;
 	background-color: pink;
 	width: 100%;
-	height: 40px;
+	height: 80px;
 }
 
 #header h2 {
 	color: green;
-	padding: 0px;
+	padding-top: 10px;
+	padding-left: 15px;
 	margin: 0px;
 	width: 50%;
 	position: relative;
 }
 
-#header .logout {
+#header .login {
 	position: absolute;
 	top:0;
 	right:0;
@@ -29,12 +31,25 @@
 body {
 	padding:0;
 	margin:0;
-	height: 2000px;
 }
 
-#container {
-	width: 500px;
-	margin-top: 150px;
-	margin-left: auto;
-	margin-right: auto;
+#front {
+	height:100vh;
+	width:100vw;
+	background-image :url(/images/index-bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#register-doge {
+	text-align: center;
+	padding-top:200px;
+}
+
+#register-doge a {
+	text-decoration: none;
+	font-size: 50px;
+	color: pink;
+	font-family:"Comic Sans MS", "Comic Sans", cursive;
 }
