@@ -1,0 +1,40 @@
+/** Styles for header **/
+#header {
+	position: fixed;
+	top: 0;
+	background-color: pink;
+	width: 100%;
+	height: 40px;
+}
+
+#header h2 {
+	color: green;
+	padding: 0px;
+	margin: 0px;
+	width: 50%;
+	position: relative;
+}
+
+#header .logout {
+	position: absolute;
+	top:0;
+	right:0;
+	padding: 0px;
+	margin: 0px;
+	margin-right:15px;
+}
+
+/** Main content **/
+
+body {
+	padding:0;
+	margin:0;
+	height: 2000px;
+}
+
+#container {
+	width: 500px;
+	margin-top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
