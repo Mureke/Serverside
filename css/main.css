@@ -1,4 +1,7 @@
 /** Styles for header **/
+a{
+    text-decoration: none;
+}
 
 #header {
 	position: fixed;
@@ -20,12 +23,12 @@
 
 #header .login {
 	position: absolute;
-	top:10px;
+	top:14px;
 	right:0;
 	padding: 0px;
 	margin: 0px;
 	margin-right:15px;
-	color: #1E5AE6;
+	color: #fff;
 	font-size:20px;
 }
 
