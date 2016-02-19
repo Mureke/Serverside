@@ -34,6 +34,18 @@
 	margin-left:10px;
 }
 
+#header input,
+#header button {
+	border-radius:4px;
+}
+
+#header button {
+	color:#1E5AE6;
+	font-size:15px;
+	font-weight: bold;
+}
+
+
 /** Front page content **/
 
 * {
@@ -60,12 +72,12 @@ p.error {
 	background-size: cover;
 }
 
-#register-doge {
+#front-doge {
 	text-align: center;
 	padding-top:180px;
 }
 
-#register-doge p {
+#front-doge p {
 	text-decoration: none;
 	font-size: 60px;
 	color: #fff;
@@ -93,6 +105,15 @@ p.error {
 	transition: background-color 0.3s ease-in,
               border-color 0.3s ease-in;
 }
+
+/** Register page **/
+
+#register-doge {
+	text-align: center;
+	padding-top:180px;
+}
+
+
 
 /** Footer styles **/
 
