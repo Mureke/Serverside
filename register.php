@@ -14,7 +14,12 @@
 	
 	if (empty($_POST['email'])) {
 		$errors[] = 'You forgot to enter your email address.';
-	} else {
+        }
+        elseif (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false){
+            $errors[] = 'Invalid email.';
+        }
+        
+	 else {
 		$user->email = trim($_POST['email']);
 	}
 	
