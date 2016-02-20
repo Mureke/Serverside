@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * This class contains everything related to database
+ */
 class Db{
     
     protected static $connection;
@@ -29,7 +31,7 @@ class Db{
         return $result;
     }
     
-
+    
     public function select($query) {
         $rows = array();
         $result = $this -> query($query);

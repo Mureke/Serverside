@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php 
+    include('db/user.php');
+?>
+
 <html>
 	<head>
 		<meta charset=utf-8>
@@ -14,12 +18,26 @@
             	<p>DogeBook</p>
         	</a>
         </div>
+        
+        <?php
+        
+            if(!empty($_POST['loginsubmit'])){
+            $user = new User;
+            $password = trim($_POST['passwordlogin']);
+                        $user->password = ($password);
+                        $user->name = trim($_POST['usernamelogin']);
+            $user->login();
+            }
+        ?>
+        
 		<div class="login">
-			<label for="username">Username:</label><input id="username" type="text" name="username" size="15" maxlength="30" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>">
-			<label for="password">Password:</label><input id="password" type="password" name="password" size="15" maxlength="15" value="" >
+                    <form method="post">
+			<label for="usernamelogin">Username:</label><input id="username" type="text" name="usernamelogin" size="15" maxlength="30" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>">
+			<label for="passwordlogin">Password:</label><input id="password" type="password" name="passwordlogin" size="15" maxlength="15" value="" >
 				<div id="login-button">
-					<button id="login" type="submit" name="login" value="Log in">Log in</button>
+					<button id="login" type="submit" name="loginsubmit" value="Log in">Log in</button>
 				</div>
+                    </form>
 		</div>
 	</div>
 

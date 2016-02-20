@@ -54,6 +54,13 @@ a{
 	width:20%;
 }
 
+.login-error{
+    color:red !important;
+    font-size: 16px !important;
+    float:right;
+    margin: -20px -40px 0px 0px !important;
+}
+
 /** Front page content **/
 
 * {

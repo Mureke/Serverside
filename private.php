@@ -1,4 +1,4 @@
-
+<?php echo "Logged in as cyka :D " ?>
     <div id="posts">
     <div id="postHeader">
         
