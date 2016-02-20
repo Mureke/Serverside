@@ -32,13 +32,19 @@
 	} else {
 		$errors[] = 'You forgot to enter your password.';
 	}
+       
+        $namevalidator = $user->checkIfUserExists();
+        
+        if($namevalidator == 1){
+            $errors[] = "User already exists in database";
+        }
+      
 	if (empty($errors)) { // If everything's OK.
 	// Inform that all values are OK
 	echo '<p class="accountCreated">New account created!';
          $user->create();
 	
 	} else { // Report the errors.
-		//header ("location: register-page.php"); 
 		echo '<h2>Error!</h2>
 		<p class="error">The following error(s) occurred:<br>';
 		foreach ($errors as $msg) { // Print each error.
