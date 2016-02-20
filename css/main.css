@@ -38,11 +38,13 @@ a{
 }
 
 #header input,
-#header button {
+#header button, 
+#register-doge button{
 	border-radius:4px;
 }
 
-#header button {
+#header button,
+#register-doge button {
 	color:#1E5AE6;
 	font-size:15px;
 	font-weight: bold;
@@ -66,13 +68,6 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 }
-
-p.error {
-	color:red;
-	font-weight: bold;
-	font-size: 110%;
-}
-
 
 #front-doge {
 	text-align: center;
@@ -121,6 +116,24 @@ p.error {
 
 .register-input-text input {
    margin: 5px 17px;
+}
+
+p.error {
+	color:red;
+	font-weight: bold;
+	font-size: 110%;
+        text-align: center;
+        position: relative;
+        top:100px;
+}
+
+p.accountCreated {
+        color:green;
+        position:relative;
+        top:100px;
+        text-align: center;
+        font-size: 110%;
+        font-weight: bold;
 }
 
 /** Footer styles **/
