@@ -1,4 +1,4 @@
-<?php echo "Logged in as cyka :D " ?>
+<?php include("loggedInHeader.php"); ?>
     <div id="posts">
     <div id="postHeader">
         
