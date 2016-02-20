@@ -70,7 +70,7 @@ a{
 body {
 	padding:0;
 	margin:0;
-        background-image :url(/images/index-bg.jpg);
+        background-image :url("../images/index-bg.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
