@@ -58,6 +58,10 @@ a{
 body {
 	padding:0;
 	margin:0;
+        background-image :url(/images/index-bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 p.error {
@@ -66,14 +70,6 @@ p.error {
 	font-size: 110%;
 }
 
-#front {
-	height:100vh;
-	width:100vw;
-	background-image :url(/images/index-bg.jpg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-}
 
 #front-doge {
 	text-align: center;
@@ -112,11 +108,17 @@ p.error {
 /** Register page **/
 
 #register-doge {
-	text-align: center;
+        text-align: center;
 	padding-top:180px;
 }
 
+.register-input-text{
+    color:#fff;
+}
 
+.register-input-text input {
+   margin: 5px 17px;
+}
 
 /** Footer styles **/
 
