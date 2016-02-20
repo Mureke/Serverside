@@ -10,7 +10,7 @@ class User{
     public function create(){
         $db = new Db();
         $avatar = rand(2, 20);
-        $db -> query("INSERT INTO `users`( `name`, `email`, `password`, `role`, `avatar`) VALUES (" . $this->name . "," . $this->email . "," . $this->password . ",'User'," . $avatar . ");" );
+        $db -> query("INSERT INTO `users`( `name`, `email`, `password`, `role`, `avatar`) VALUES ('" . $this->name . "','" . $this->email . "','" . $this->password . "','User','" . $avatar . "');" );
         echo $avatar;
         $this->result = $db;
        }
