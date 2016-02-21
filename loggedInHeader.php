@@ -23,7 +23,7 @@ include('db/user.php');
     
                     
                     <div id="login-button">
-                    <button id="logout" type="submit" name="logoutsubmit" value="Logout">Log out</button>
+                    <button id="logout" type="submit" name="logoutsubmit" value="Logout"><a href="logout.php">Log out</a></button>
                 </div>
 			
                 

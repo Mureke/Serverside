@@ -51,8 +51,7 @@ class User{
             $_SESSION['name'] = $name;
             $_SESSION['id'] = $id;
        
-            
-            header("Location: private.php");
+            echo "<script> window.location.assign('private.php'); </script>";
         }
 
         else{

@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <?php 
     include('db/user.php');
+
+    if(!empty($_POST['loginsubmit'])){
+        $user = new User;
+        $password = trim($_POST['passwordlogin']);
+                    $user->password = ($password);
+                    $user->name = trim($_POST['usernamelogin']);
+        $user->login();
+        }
 ?>
 
 <html>
@@ -19,16 +27,7 @@
         	</a>
         </div>
         
-        <?php
         
-            if(!empty($_POST['loginsubmit'])){
-            $user = new User;
-            $password = trim($_POST['passwordlogin']);
-                        $user->password = ($password);
-                        $user->name = trim($_POST['usernamelogin']);
-            $user->login();
-            }
-        ?>
         
 		<div class="login">
                     <form method="post">
