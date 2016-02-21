@@ -1,8 +1,10 @@
 
 <?php include('header.php');?>
 <?php
- 
-    $user = new User;
+    //Make a new instance of user class.
+   $user = new User;
+   
+   //Register validation. Only validate if register form is submitted.
    if(!empty($_POST['registersubmit'])){
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$errors = array(); 
@@ -40,6 +42,7 @@
             $errors[] = "User already exists in database";
         }
       
+        //create new user if validation is succesfull and there is no errors.
 	if (empty($errors)) { 
 	echo '<p class="accountCreated">New account created!';
          $user->create();

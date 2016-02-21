@@ -16,7 +16,8 @@ class User{
   
         }
    /*
-    * This method is used to check if username already exists in database
+    * This method is used to check if username already exists in database before
+    * adding it to the database.
     */
    public function checkIfUserExists(){
       $db = new Db();
@@ -31,6 +32,10 @@ class User{
      }
    }
    
+   /*
+    * This method is used for logging in and starting the session.
+    * Redirects to private part of the page.
+    */
    public function login(){
     $db = new Db();
     $password = md5($this->password);
@@ -46,7 +51,6 @@ class User{
         }
         
         if(isset($name) && isset($password1)){
-            //LOGIN ACTION or session shit :D
             session_start();
             $_SESSION['name'] = $name;
             $_SESSION['id'] = $id;
