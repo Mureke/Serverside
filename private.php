@@ -1,4 +1,7 @@
-<?php echo "Logged in as cyka :D " ?>
+<?php 
+session_start();
+echo "Logged in as " . $_SESSION['name'] . ".  Your user ID is: " . $_SESSION['id']; 
+?>
     <div id="posts">
     <div id="postHeader">
         

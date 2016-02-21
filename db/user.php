@@ -35,16 +35,20 @@ class User{
     $db = new Db();
     $password = md5($this->password);
    
-    $rows = $db->query(" SELECT name, password FROM users WHERE name = '$this->name' and password =('$password')");
+    $rows = $db->query(" SELECT id, name, password FROM users WHERE name = '$this->name' and password =('$password')");
     
     if(isset($rows)){
-        foreach($rows as $item){
-            $name = $item['name'];
-            $password1 = $item['password'];
+        foreach($rows as $user){
+            $id = $user['id'];
+            $name = $user['name'];
+            $password1 = $user['password'];
         }
         
         if(isset($name) && isset($password1)){
             //LOGIN ACTION or session shit :D
+            session_start();
+            $_SESSION['name'] = $name;
+            $_SESSION['id'] = $id;
             header("Location: private.php");
         }
 
