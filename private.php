@@ -1,7 +1,5 @@
-<?php 
-session_start();
-echo "Logged in as " . $_SESSION['name'] . ".  Your user ID is: " . $_SESSION['id']; 
-?>
+<?php include("loggedInHeader.php"); ?>
+
     <div id="posts">
     <div id="postHeader">
         
