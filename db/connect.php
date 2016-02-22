@@ -24,10 +24,10 @@ class Db{
     public function query($query){
         // Connect to the database
         $connection = $this -> connect();
-
         // Query the database
-        $result = $connection -> query($query);
-       
+        $stmt = mysqli_prepare($connection, $query);
+        $stmt->execute();
+        $result = $stmt ->get_result();
         return $result;
     }
     
