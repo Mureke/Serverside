@@ -3,6 +3,7 @@
 <?php 
 session_start();
 include('db/user.php');
+include('db/posts.php');
 ?>
 
 <html>

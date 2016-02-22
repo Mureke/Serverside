@@ -44,7 +44,8 @@ a{
 }
 
 #header button,
-#register-doge button {
+#register-doge button,
+#newPost button {
 	color:#1E5AE6;
 	font-size:15px;
 	font-weight: bold;
@@ -113,7 +114,7 @@ body {
 /** Register page **/
 
 #register-doge {
-        text-align: center;
+    text-align: center;
 	padding-top:180px;
 }
 
@@ -141,6 +142,24 @@ p.accountCreated {
         text-align: center;
         font-size: 110%;
         font-weight: bold;
+}
+
+/** New post styles **/
+
+#newPost {
+	margin-right:auto;
+	margin-left:auto;
+	padding-top:100px;
+	width: 50vw;
+}
+
+p.new-post {
+	color:#fff;
+}
+
+#newPost textarea {
+	width:100%;
+	height: 100px;
 }
 
 /** Footer styles **/
