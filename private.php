@@ -3,6 +3,7 @@
 
 	$post = new Post;
 
+	// Checks if the user typed anything into the textarea 
 
 	if(!empty($_POST['postsubmit'])){
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -26,6 +27,9 @@
 		}
 	}
 }
+
+	// function doesn't work yet 
+	// $post->showPosts();
 ?>
 
 <div id="newPost">
