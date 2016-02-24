@@ -29,3 +29,5 @@ CREATE TABLE comments(
 
 #Version 1.1
     ALTER TABLE users ADD avatar int not null;
+    ALTER TABLE posts ADD COLUMN post_date timestamp default now();
+    ALTER TABLE comments ADD COLUMN comment_date timestamp default now();
