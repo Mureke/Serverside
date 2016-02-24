@@ -29,7 +29,8 @@ class Post{
                                 posts p,
                                 users u
                             WHERE 
-                                p.userId=u.id"
+                                p.userId=u.id
+                            ORDER BY post_date DESC;"
                             );
 
         return $rows;

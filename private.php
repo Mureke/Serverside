@@ -18,8 +18,13 @@
 	if (empty($errors)) { 
 	echo '<p class="accountCreated">New post created!';
          $post->createPost();
-	
-	} else { 
+         
+         /*
+          * This is added so user can refresh the page without resubmitting the form.
+          */
+         echo "<script> window.location.assign('private.php'); </script>";
+	}
+        else { 
 		echo '<p class="error">The following error(s) occurred:<br>';
 		foreach ($errors as $msg) { 
 			echo " - $msg<br>\n";
