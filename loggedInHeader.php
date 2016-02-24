@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php 
-session_start();
+
 include('db/user.php');
 include('db/posts.php');
 if(!isset($_SESSION['name']) || !isset($_SESSION['id'])){
