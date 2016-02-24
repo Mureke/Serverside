@@ -23,17 +23,12 @@ include('db/posts.php');
         </div>
     
                     
-                    <div id="login-button">
+                <div id="logout-button">
                     <button id="logout" type="submit" name="logoutsubmit" value="Logout"><a href="logout.php">Log out</a></button>
                 </div>
 			
                 
 		</div>
-    
-	<?php
-        //Session testing
-        echo "<p class='error' style='color:white;'> Logged in as " . $_SESSION['name'] . ".  Your user ID is: " . $_SESSION['id'] . "</p>"; 
-        ?>
 
 
 	

@@ -19,9 +19,20 @@ class Post{
         
     public function showPosts(){
         $db = new Db();
-        $rows = $db->query("SELECT postId AS postId, post AS post, userId AS user FROM posts");
+        $rows = $db->select("SELECT 
+                                p.post as post,
+                                p.userId as userid,
+                                u.id as id,
+                                u.name as name,
+                                u.avatar as avatar
+                            FROM 
+                                posts p,
+                                users u
+                            WHERE 
+                                p.userId=u.id"
+                            );
 
-        echo '<table><tr><td>' . $rows['postId'] . '</td><td>' . $rows['post'] . '</td><td>' . $rows['user'] . '</td></tr></table>';
+        return $rows;
     
     }
 }

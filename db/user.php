@@ -47,14 +47,12 @@ class User{
             $id = $user['id'];
             $name = $user['name'];
             $password1 = $user['password'];
-            $role = $user['role'];
         }
         
         if(isset($name) && isset($password1)){
             session_start();
             $_SESSION['name'] = $name;
             $_SESSION['id'] = $id;
-       
             echo "<script> window.location.assign('private.php'); </script>";
         }
 

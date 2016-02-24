@@ -27,9 +27,8 @@
 		}
 	}
 }
-
-	// function doesn't work yet 
-	// $post->showPosts();
+        
+	
 ?>
 
 <div id="newPost">
@@ -38,3 +37,14 @@
             <p class="new-post"><button id="submit" type="submit" name="postsubmit" value="post">Publish post</button></p>
 	</form>
 </div>
+        
+<?php
+//Rendering all posts, poster names and avatars
+    $postarray = $post->showPosts();
+    foreach($postarray as $item): ?>
+       <div class="renderpostbox">
+           <img class ="avatar" src="<?php echo 'images/'. $item['avatar'] . '.jpg' ?>"/>
+           <p class="postername"> <?php echo $item['name']; ?> </p>
+           <p class="postrender"> <?php echo $item['post']; ?> </p>
+       </div> 
+    <?php endforeach; ?>
