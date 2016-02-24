@@ -43,7 +43,9 @@ a{
 
 #header input,
 #header button, 
-#register-doge button{
+#register-doge button,
+.new-post button,
+.new-post textarea{
 	border-radius:4px;
 }
 
@@ -142,7 +144,7 @@ p.error {
 p.accountCreated {
         color:green;
         position:relative;
-        top:100px;
+        top:50px;
         text-align: center;
         font-size: 110%;
         font-weight: bold;

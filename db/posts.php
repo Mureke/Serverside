@@ -14,7 +14,7 @@ class Post{
         }
 
     /*
-        Show posts from database, needs fixing
+        Shows posts from database
     */
         
     public function showPosts(){

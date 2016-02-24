@@ -16,13 +16,13 @@
 	}
 
 	if (empty($errors)) { 
-	echo '<p class="accountCreated">New post created!';
+	echo '<p class="accountCreated">New post created! Refreshing page..';
          $post->createPost();
          
          /*
           * This is added so user can refresh the page without resubmitting the form.
           */
-         echo "<script> window.location.assign('private.php'); </script>";
+          echo '<script type="text/javascript">setTimeout(function(){window.top.location="private.php"} , 5000);</script>';
 	}
         else { 
 		echo '<p class="error">The following error(s) occurred:<br>';
