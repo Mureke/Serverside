@@ -23,7 +23,7 @@
          /*
           * This is added so user can refresh the page without resubmitting the form.
           */
-          echo '<script type="text/javascript">setTimeout(function(){window.top.location="private.php"} , 5000);</script>';
+          echo '<script type="text/javascript">setTimeout(function(){window.top.location="private.php"} , 4000);</script>';
 	}
         else { 
 		echo '<p class="error">The following error(s) occurred:<br>';
@@ -33,8 +33,7 @@
 		}
 	}
 }
-        
-	
+   	
 ?>
 
 <div id="newPost">
@@ -51,6 +50,15 @@
        <div class="renderpostbox">
            <img class ="avatar" src="<?php echo 'images/'. $item['avatar'] . '.jpg' ?>"/>
            <p class="postername"> <?php echo $item['name']; ?> </p>
+
+           <?php if ($item['name'] == $_SESSION['name']) {
+
+           		?><button class="deletePost" id="submit" type="submit" name="postdelete" value="delete"><?php echo "<a href=\"delete.php?postid=" . $item['postid'] . "\">Delete</a>"; ?></button>
+
+           		<button class="editPost" id"submit" type="submit" name="postedit" value="edit"><?php echo "<a href=\"edit.php?postid=" . $item['postid'] . "\">Edit</a>"; ?></button>
+           		<?php
+           	} ?>
+           	
            <p class="postrender"> <?php echo $item['post']; ?> </p>
        </div> 
     <?php endforeach; ?>

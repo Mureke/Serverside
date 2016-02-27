@@ -45,13 +45,15 @@ a{
 #header button, 
 #register-doge button,
 .new-post button,
-.new-post textarea{
+.new-post textarea,
+.renderpostbox button{
 	border-radius:4px;
 }
 
 #header button,
 #register-doge button,
-#newPost button {
+#newPost button,
+.renderpostbox button {
 	color:#1E5AE6;
 	font-size:15px;
 	font-weight: bold;
@@ -194,6 +196,12 @@ p.new-post {
 
 .postrender{
     color:white;
+}
+
+.deletePost,
+.editPost {
+	float:right;
+	margin-right:5px;
 }
 
 /** Footer styles **/

@@ -3,6 +3,7 @@
 class Post{
     public $postContent;
     public $userId;
+    public $postNumber;
     
     /*
      * Add new post to database
@@ -22,6 +23,7 @@ class Post{
         $rows = $db->select("SELECT 
                                 p.post as post,
                                 p.userId as userid,
+                                p.postId as postid,
                                 u.id as id,
                                 u.name as name,
                                 u.avatar as avatar
@@ -35,6 +37,26 @@ class Post{
 
         return $rows;
     
+    }
+
+    public function deletePost(){
+        $db = new Db();
+        
+    }
+
+    /*
+        Allows post owner to modify his/her own posts
+    */
+
+    public function editPost(){
+        $db = new Db();
+        $rows = $db->select("SELECT 
+                                p.post as post
+                            FROM 
+                                posts p 
+                            WHERE 
+                                p.postId == '" . $this->postNumber . "';"
+                            );
     }
 }
 ?>
