@@ -28,7 +28,9 @@ if(!isset($_SESSION['name']) || !isset($_SESSION['id'])){
     
                     
                 <div id="logout-button">
-                    <button id="logout" type="submit" name="logoutsubmit" value="Logout"><a href="logout.php">Log out</a></button>
+                    <form action="logout.php">
+                        <input id="logout" type="submit" name="logoutsubmit" value="Logout"></input>
+                    </form>
                 </div>
 			
                 
