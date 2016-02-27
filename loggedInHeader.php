@@ -4,6 +4,7 @@
 
 include('db/user.php');
 include('db/posts.php');
+include('db/comments.php');
 if(!isset($_SESSION['name']) || !isset($_SESSION['id'])){
     echo "Not logged in. Go back to <a href='index.php'> Front page </a>";
     exit();

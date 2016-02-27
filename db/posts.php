@@ -49,14 +49,16 @@ class Post{
     */
 
     public function editPost(){
+
         $db = new Db();
-        $rows = $db->select("SELECT 
-                                p.post as post
-                            FROM 
-                                posts p 
-                            WHERE 
-                                p.postId == '" . $this->postNumber . "';"
-                            );
+        
+        $db->query("UPDATE
+                        posts
+                    SET
+                        post = '" . $this->postContent . "'
+                    WHERE
+                        postId = " . $this->postNumber . ";"           
+                    );       
     }
 }
 ?>

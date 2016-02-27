@@ -6,7 +6,7 @@
 	include("loggedInHeader.php"); 
 
 	$post = new Post;
-
+       
 	if(!empty($_POST['editsubmit'])){
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$errors = array(); 
@@ -37,9 +37,9 @@
 ?>
 
 <div id="newPost">
-<form action="edit.php" method="post">
-	<p class="new-post"><label class="label" for="post">Edit post:</label><textarea id="post" type="text" name="post" size="2500" maxlength="2500" value=""></textarea></p>
-
-		<input type="hidden" name="postid" value="<?php echo $_GET['postid']; ?>"/>          <p class="new-post"><button id="submit" type="submit" name="editsubmit" value="post">Update post</button></p>
-	</form>
+    <form action="edit.php"method="post"> 
+        <p class="new-post"><label class="label" for="post">Edit post:</label><textarea id="post" type="text" name="post" size="2500" maxlength="2500" value=""></textarea></p>
+ +		<input type="hidden" name="postid" value="<?php echo $_GET['postid']; ?>"/>
+        <p class="new-post"><button id="submit" type="submit" name="editsubmit" value="post">Update post</button></p>
+ +	</form>
 </div>
