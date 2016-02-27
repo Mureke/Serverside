@@ -24,7 +24,7 @@
          /*
           * This is added so user is redirected back to forum page after modifying the post.
           */
-          echo '<script type="text/javascript">setTimeout(function(){window.top.location="private.php"} , 4000);</script>';
+          echo '<script type="text/javascript">setTimeout(function(){window.top.location="private.php"} , 1000);</script>';
 	}
         else { 
 		echo '<p class="error">The following error(s) occurred:<br>';

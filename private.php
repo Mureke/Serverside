@@ -23,7 +23,7 @@
          /*
           * This is added so user can refresh the page without resubmitting the form.
           */
-          echo '<script type="text/javascript">setTimeout(function(){window.top.location="private.php"} , 4000);</script>';
+          echo '<script type="text/javascript">setTimeout(function(){window.top.location="private.php"} , 1000);</script>';
 	}
         else { 
 		echo '<p class="error">The following error(s) occurred:<br>';
