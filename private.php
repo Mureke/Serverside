@@ -55,7 +55,7 @@
 
            		?><button class="deletePost" id="submit" type="submit" name="postdelete" value="delete"><?php echo "<a href=\"delete.php?postid=" . $item['postid'] . "\">Delete</a>"; ?></button>
 
-           		<button class="editPost" id="submit" type="submit" name="postedit" value="edit"><?php echo "<a href=\"edit.php?postid=" . $item['postid'] . "\">Edit</a>"; ?></button>
+           		<button class="editPost" id="submit" type="submit" name="postedit" value="edit"><?php echo "<a href=\"edit.php?postid=" . $item['postid'] . "&oldpost=" . trim($item['post']) ."\">Edit</a>"; ?></button>
            		<?php
            	} ?>
            	
