@@ -38,8 +38,11 @@
 
 <div id="newPost">
     <form action="edit.php"method="post"> 
-        <p class="new-post"><label class="label" for="post">Edit post:</label><textarea id="post" type="text" name="post" size="2500" maxlength="2500" value=""><?php if(!empty($_GET['oldpost'])){echo ($_GET['oldpost']);}?></textarea></p>
- 		<input type="hidden" name="postid" value="<?php echo $_GET['postid']; ?>"/>
+        <p class="new-post">
+            <label class="label" for="post">Edit post:</label>
+            <textarea id="post" type="text" name="post" size="2500" maxlength="2500" value=""><?php if(!empty($_GET['oldpost'])){echo ($_GET['oldpost']);}?></textarea>
+        </p>
+        <input type="hidden" name="postid" value="<?php echo $_GET['postid']; ?>"/>
         <p class="new-post"><button id="submit" type="submit" name="editsubmit" value="post">Update post</button></p>
     </form>
 </div>

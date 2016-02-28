@@ -10,6 +10,7 @@ class Post{
      */
     public function createPost(){
         $db = new Db();
+        $this->postContent = $db->stripInput($this->postContent);
         $db -> query("INSERT INTO `posts`( `post`, `userId`) VALUES ('" . $this->postContent . "','" . $this->userId . "');" );
   
         }
@@ -51,7 +52,7 @@ class Post{
     public function editPost(){
 
         $db = new Db();
-        
+        $this->postContent = $db->stripInput($this->postContent);
         $db->query("UPDATE
                         posts
                     SET

@@ -43,4 +43,9 @@ class Db{
         }
         return $rows;
     }
+    
+    //Small method for stripping html and php tags from inputs
+     public function stripInput($value) {
+        return strip_tags($value);
+    }
 }
