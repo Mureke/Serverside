@@ -66,7 +66,7 @@
            <div class="commentsection">
             <form class="commentform" method="post" action="private.php">
                 <p class="addcomment">Add comment:</p><input class="commentarea" type="text" name="comment"></input>
-                <button class="postcomment" id="submit" type="submit" name="postcomment" value="comment">Comment</button>
+                <button class="postcomment" id="submit" type="submit" name="commentsubmit" value="comment">Comment</button>
             </form>
            </div>
        </div> 
