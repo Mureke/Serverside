@@ -52,15 +52,17 @@
            <img class ="avatar" src="<?php echo 'images/'. $item['avatar'] . '.jpg' ?>"/>
            <p class="postername"> <?php echo $item['name']; ?> </p>
 
-           <?php if ($item['name'] == $_SESSION['name']) {
 
-           		?><button class="deletePost" id="submit" type="submit" name="postdelete" value="delete"><?php echo "<a href=\"delete.php?postid=" . $item['postid'] . "\">Delete</a>"; ?></button>
+           <?php // Shows Edit and Delete post buttons if the current user is the same as poster
+           if ($item['name'] == $_SESSION['name']) {
+
+           		?><button class="deletePost" id="submit" type="submit" name="postdelete" value="delete"><?php echo "<a href=\"delete.php?postid=" . $item['postid'] .  "&oldpost=" . trim($item['post']) ."\">Delete</a>"; ?></button>
 
            		<button class="editPost" id="submit" type="submit" name="postedit" value="edit"><?php echo "<a href=\"edit.php?postid=" . $item['postid'] . "&oldpost=" . trim($item['post']) ."\">Edit</a>"; ?></button>
            		<?php
            	} ?>
            	
-           <p class="postrender"> <?php echo $item['post']; ?> </p>
+           <textarea disabled class="postrender"><?php echo $item['post']; ?></textarea>
        </div>
            <!-- Comment section -->
            <div class="commentsection">

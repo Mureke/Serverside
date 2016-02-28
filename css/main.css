@@ -32,7 +32,8 @@ a{
 	font-size:20px;
 }
 
-#header #login-button {
+#header #login-button,
+button.delete {
 	float: right;
 	margin-left:10px;
 }
@@ -46,14 +47,17 @@ a{
 #register-doge button,
 .new-post button,
 .new-post textarea,
-.renderpostbox button{
+.renderpostbox button,
+button.delete {
 	border-radius:4px;
 }
 
 #header button,
 #register-doge button,
 #newPost button,
-.renderpostbox button {
+.renderpostbox button,
+#logout-button input,
+button.delete {
 	color:#1E5AE6;
 	font-size:15px;
 	font-weight: bold;
@@ -165,6 +169,11 @@ p.new-post {
 	color:#fff;
 }
 
+p.new-post button {
+	float:right;
+	margin-right:5px;
+}
+
 #newPost textarea {
 	width:100%;
 	height: 100px;
@@ -200,6 +209,13 @@ p.new-post {
 
 .postrender{
     color:white;
+    height:100px;
+    width:100%;
+    color:#000000;
+    resize:none;
+    border-radius:4px;
+    margin-top:4px;
+    margin-bottom:4px;
 }
 
 .deletePost,
