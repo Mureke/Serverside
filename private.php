@@ -4,7 +4,7 @@
 
 	$post = new Post;
 
-	// Checks if the user typed anything into the textarea 
+	// Checks if the user typed anything post into the textarea 
 
 	if(!empty($_POST['postsubmit'])){
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -48,6 +48,7 @@
     $postarray = $post->showPosts();
     foreach($postarray as $item): ?>
        <div class="renderpostbox">
+       <div class="postwrapper">
            <img class ="avatar" src="<?php echo 'images/'. $item['avatar'] . '.jpg' ?>"/>
            <p class="postername"> <?php echo $item['name']; ?> </p>
 
@@ -60,5 +61,13 @@
            	} ?>
            	
            <p class="postrender"> <?php echo $item['post']; ?> </p>
+       </div>
+           <!-- Comment section -->
+           <div class="commentsection">
+            <form class="commentform" method="post" action="private.php">
+                <p class="addcomment">Add comment:</p><input class="commentarea" type="text" name="comment"></input>
+                <button class="postcomment" id="submit" type="submit" name="postcomment" value="comment">Comment</button>
+            </form>
+           </div>
        </div> 
     <?php endforeach; ?>
