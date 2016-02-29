@@ -33,6 +33,37 @@
 		}
 	}
 }
+
+    $comment = new Comment;
+    if(!empty($_POST['commentsubmit'])){
+     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+         $errors = array();
+         
+         if (empty($_POST['comment'])) {
+		$errors[] = "You can't submit an empty comment.";
+	} else {
+		$comment->comment = trim($_POST['comment']);
+		$comment->userId = $_SESSION['id'];
+                $comment->postId = $_POST['commentsubmit'];
+	}
+        
+            if (empty($errors)) { 
+             echo '<p class="accountCreated">New comment created! Refreshing page..';
+             echo $comment->postId;
+             $comment->create();
+              /*
+               * This is added so user can refresh the page without resubmitting the form.
+               */
+               echo '<script type="text/javascript">setTimeout(function(){window.top.location="private.php"} , 1000);</script>';
+             }
+             else { 
+                     echo '<p class="error">The following error(s) occurred:<br>';
+                     foreach ($errors as $msg) { 
+                             echo " - $msg<br>\n";
+             }
+        }
+        }
+    }
    	
 ?>
 
@@ -64,11 +95,12 @@
            	
            <div class="postrender"><?php echo $item['post']; ?></div>
        </div>
+           
            <!-- Comment section -->
            <div class="commentsection">
             <form class="commentform" method="post" action="private.php">
                 <p class="addcomment">Add comment:</p><input class="commentarea" type="text" name="comment"></input>
-                <button class="postcomment" id="submit" type="submit" name="commentsubmit" value="comment">Comment</button>
+                <button class="postcomment" id="submit" type="submit" name="commentsubmit" value=" <?php echo $item['postid']; ?> ">Comment</button>
             </form>
            </div>
        </div> 
