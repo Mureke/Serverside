@@ -40,9 +40,17 @@ class Post{
     
     }
 
+    /*
+        Allows post owner to delete his/her own posts 
+    */
+
     public function deletePost(){
         $db = new Db();
-        
+        $db->query("DELETE FROM
+                        posts
+                    WHERE
+                        postId = ". $this->postNumber . ";"
+            );   
     }
 
     /*
