@@ -62,7 +62,7 @@
            		<?php
            	} ?>
            	
-           <textarea disabled class="postrender"><?php echo $item['post']; ?></textarea>
+           <div class="postrender"><?php echo $item['post']; ?></div>
        </div>
            <!-- Comment section -->
            <div class="commentsection">

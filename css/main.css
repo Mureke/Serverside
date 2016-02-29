@@ -209,9 +209,9 @@ p.new-post button {
 
 .postrender{
     color:white;
-    height:100px;
+    height:auto;
     width:100%;
-    color:#000000;
+    color:#FFF;
     resize:none;
     border-radius:4px;
     margin-top:4px;
