@@ -1,4 +1,6 @@
-#sql
+#sql dump
+#!IMPORTANT!
+#Remember to add your database info to config.ini in db/conf 
 
 CREATE TABLE users(
 	id int not null auto_increment,

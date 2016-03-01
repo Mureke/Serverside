@@ -20,7 +20,9 @@ class Db{
         return self::$connection;
     }
    
-
+    /*
+     * Method for querying the database
+     */
     public function query($query){
         // Connect to the database
         $connection = $this -> connect();
@@ -31,7 +33,9 @@ class Db{
         return $result;
     }
     
-    
+    /*
+     * Method for selecting data from the database
+     */
     public function select($query) {
         $rows = array();
         $result = $this -> query($query);

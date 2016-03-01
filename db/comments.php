@@ -5,12 +5,18 @@ class Comment{
       public $postId;
       public $userId;
     
+    /*
+     * This method is used for adding comments to database
+     */
     public function create(){
         $db = new Db();
         $this->comment = $db->stripInput($this->comment);
           $db -> query("INSERT INTO `comments`( `comment`, `userId`, `postId`) VALUES ('" . $this->comment . "','" . $this->userId . "','" . $this->postId ."');" );
     }
     
+     /*
+     * This method is used for fetching all comments and related data from database
+     */
     public function showcomments(){
         $db = new Db();
 
@@ -33,6 +39,9 @@ class Comment{
         return $rows;
     }
     
+    /*
+     * This method is used for getting only the comments related to one specific post
+     */
     public function searchComments($array, $key, $value)
     {
     $results = array();
