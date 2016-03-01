@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Header used by front page
+contains login, meta/stylesheet - links used in the site -->
 <?php 
     include('db/user.php');
 
@@ -20,6 +22,7 @@
 		<title>DogeBook</title>
 	</head>
 <body>
+	<!-- Site logo with a link to the frontpage -->
     <div id="header">
     	<div id="logo">
         	<a href="index.php">
@@ -28,15 +31,15 @@
         </div>
         
         
-        
+        <!-- Login field -->
 		<div class="login">
-                    <form method="post">
-			<label for="usernamelogin">Username:</label><input id="username" type="text" name="usernamelogin" size="15" maxlength="30" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>">
-			<label for="passwordlogin">Password:</label><input id="password" type="password" name="passwordlogin" size="15" maxlength="15" value="" >
-				<div id="login-button">
-					<button id="login" type="submit" name="loginsubmit" value="Log in">Log in</button>
-				</div>
-                    </form>
+                <form method="post">
+					<label for="usernamelogin">Username:</label><input id="username" type="text" name="usernamelogin" size="15" maxlength="30" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>">
+					<label for="passwordlogin">Password:</label><input id="password" type="password" name="passwordlogin" size="15" maxlength="15" value="" >
+					<div id="login-button">
+						<button id="login" type="submit" name="loginsubmit" value="Log in">Log in</button>
+					</div>
+                </form>
 		</div>
 	</div>
 

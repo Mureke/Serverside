@@ -17,6 +17,7 @@
 	if (empty($_POST['email'])) {
 		$errors[] = 'You forgot to enter your email address.';
         }
+        // Checks if user entered a text in email format 
         elseif (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false){
             $errors[] = 'Invalid email.';
         }
@@ -57,7 +58,7 @@
 }
     
 ?>
-
+<!-- Form for registering new account -->
 <div id="register-doge">
 		<form action="register.php" method="post">
 				<p class="register-input-text"><label class="label" for="username">Username:</label><input id="username" type="text" name="username" size="30" maxlength="30" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>"></p>

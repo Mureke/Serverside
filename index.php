@@ -1,4 +1,4 @@
-
+<!-- Front page with ghost-button to register-page -->
 		<?php include("header.php"); ?>
 			
 			<div id="front">
