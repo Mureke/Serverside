@@ -216,6 +216,7 @@ p.new-post button {
     border-radius:4px;
     margin-top:4px;
     margin-bottom:4px;
+    font-size: 23px;
 }
 
 .deletePost,
@@ -226,8 +227,8 @@ p.new-post button {
 
 /** Comment area styles **/
 .commentsection{
-    margin-left: 20%;
-    border-top: 1px solid #fff;
+    margin-left: 15%;
+
    
 }
 
@@ -241,6 +242,32 @@ p.new-post button {
     display: inline;
 }
 
+.commentheader{
+    color:#fff;
+    border-bottom: 1px dotted white;
+    font-size: 17px;
+}
+.commenterwrap{
+    margin-top:12px;
+    margin-bottom:-14px !important;
+    padding-top:10px;
+}
+
+.commentavatar{
+    width:30px;
+    height:30px;
+    display: inline;
+}
+
+.commentername{
+    color:aquamarine;
+    font-size: 20px;
+    display:inline;
+}
+
+.comment{
+    color:#fff;
+}
 
 /** Footer styles **/
 
