@@ -4,8 +4,7 @@
 
 	$post = new Post;
 
-	// Checks if the user typed anything post into the textarea 
-
+	//Validation for new post. Only adds new comment if there is no errors in validation
 	if(!empty($_POST['postsubmit'])){
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$errors = array(); 
@@ -33,7 +32,7 @@
 		}
 	}
 }
-
+    //Validation for new comment. Only adds new comment if there is no errors in validation
     $comment = new Comment;
     if(!empty($_POST['commentsubmit'])){
      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -49,7 +48,6 @@
         
             if (empty($errors)) { 
              echo '<p class="accountCreated">New comment created! Refreshing page..';
-             echo $comment->postId;
              $comment->create();
               /*
                * This is added so user can refresh the page without resubmitting the form.
@@ -66,7 +64,7 @@
     }
    	
 ?>
-
+<!-- Input for making new posts -->
 <div id="newPost">
 	<form action="private.php" method="post">
 			<p class="new-post"><label class="label" for="post">New post:</label><textarea id="post" type="text" name="post" size="2500" maxlength="2500" value="<?php if (isset($_POST['post'])) echo $_POST['post']; ?>"></textarea></p>
@@ -77,6 +75,7 @@
 <?php
 //Rendering all posts, poster names and avatars
     $postarray = $post->showPosts();
+    $commentarray = $comment->showcomments();
     foreach($postarray as $item): ?>
        <div class="renderpostbox">
        <div class="postwrapper">
@@ -95,9 +94,29 @@
            	
            <div class="postrender"><?php echo $item['post']; ?></div>
        </div>
-           
+        
            <!-- Comment section -->
            <div class="commentsection">
+               <h3 class="commentheader">Comments:</h3>
+            <?php 
+            //Get comments related to a this post and rend them under the post
+            $currentcomments = $comment->searchComments($commentarray, "commentpostid", $item['postid']);
+              
+               if(!empty($currentcomments)):
+                    foreach($currentcomments as $citem): ?>
+                         <div class="commenterwrap">
+                                 <img class ="commentavatar" src="<?php echo 'images/'. $citem['avatar'] . '.jpg' ?>"/>
+                                  <p class="commentername"> <?php echo $citem['name']; ?> </p>
+                         </div>
+                         <div class="commentrender">
+                             <p class="comment"><?php echo $citem['comment']; ?></p>
+                         </div>
+                    <?php endforeach; ?>
+               <?php else:echo "<p class='comment'> No comments yet :( </p>";?>
+               <?php endif; ?>
+             
+            
+            <!-- Commenting input -->
             <form class="commentform" method="post" action="private.php">
                 <p class="addcomment">Add comment:</p><input class="commentarea" type="text" name="comment"></input>
                 <button class="postcomment" id="submit" type="submit" name="commentsubmit" value=" <?php echo $item['postid']; ?> ">Comment</button>
