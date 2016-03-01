@@ -20,6 +20,12 @@
 	if (empty($errors)) { 
 	echo '<p class="accountCreated">Post updated! Redirecting back to forum...';
          $post->editPost();
+         ?><style>
+        	#newPost{
+        		display:none;
+        	}
+        </style>
+        <?php
          
          /*
           * This is added so user is redirected back to forum page after modifying the post.

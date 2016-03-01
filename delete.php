@@ -14,6 +14,12 @@
 
 		echo '<p class="accountCreated">Post deleted! Redirecting back to forum...';
         $post->deletePost();
+        ?><style>
+        	#newPost{
+        		display:none;
+        	}
+        </style>
+        <?php
          
          /*
           * This is added so user is redirected back to forum page after modifying the post.
@@ -27,10 +33,9 @@
 <div id="newPost">
     <form action="delete.php"method="post"> 
         <p class="new-post">
-            <label class="label" for="post">Delete post:</label>
-            <textarea disabled class="postrender" id="post" type="text" name="post" size="2500" maxlength="2500" value=""><?php if(!empty($_GET['oldpost'])){echo ($_GET['oldpost']);}?></textarea>
+            <div class="postrender" id="post" type="text" name="post" size="2500" maxlength="2500" value=""><?php if(!empty($_GET['oldpost'])){echo ($_GET['oldpost']);}?></div>
         </p>
         <input type="hidden" name="postid" value="<?php echo $_GET['postid']; ?>"/>
-        <p class="new-post"><button class="delete" id="submit" type="submit" name="back" value="back"><a href="private.php">Back to forum</a></button><button class="delete" id="submit" type="submit" name="deletesubmit" value="delete">Delete post</button></p>
+        <p class="new-post"><label class="label" for="post">Are you sure you want to delete the post?</label><button class="delete" id="submit" type="submit" name="back" value="back"><a href="private.php">Back to forum</a></button><button class="delete" id="submit" type="submit" name="deletesubmit" value="delete">Delete post</button></p>
     </form>
 </div>
